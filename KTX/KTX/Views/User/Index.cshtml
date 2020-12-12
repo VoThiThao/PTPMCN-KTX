@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Models.EF.NGUOIDUNG>
+
+@{
+    ViewBag.Title = "Quản lý người dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+@section header{
+    <h3 class="fa fa-user">
+        @Html.ActionLink("Quản lý người dùng", "Index")
+    </h3>
+}
+
+
+@using (Html.BeginForm())
+{
+    <div class="col-lg-12 form-group">
+        <div class="col-md-6">
+            <p>
+                @Html.ActionLink("Tạo mới", "Create", "NguoiDung", new { @class = "btn btn-primary" })
+            </p>
+        </div>
+
+        <div class="col-md-4">
+            <input type="text" value="@ViewBag.SearchString" name="searchString"
+                   placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+        </div>
+
+        <div class="col-md-2">
+            <input type="submit" value="Tìm kiếm" class="btn btn-primary" />
+        </div>
+    </div>
+}
+
+
+<div class="col-lg-12 form-group">
+    <table class="table">
+        <tr>
+            <th>STT</th>
+            <th>
+                Tên đăng nhập
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatKhau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoTenNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChucVu)
+            </th>
+            <th></th>
+        </tr>
+        @{var i = 1;}
+        @foreach (var item in Model)
+        {
+            <tr id="row_@item.TenDangNhap">
+                <td>
+                    @i
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenDangNhap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatKhau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoTenNV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ChucVu)
+                </td>
+
+
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { @item.TenDangNhap })|
+                    @Ajax.ActionLink("Xoá", "Delete", new { @TenDangNhap = item.TenDangNhap }, new AjaxOptions
+                    {
+                        Confirm = "Bạn có muốn xoá thông tin này",
+                        OnComplete = "$('#row_" + @item.TenDangNhap + "').remove()",
+
+                        HttpMethod = "Delete"
+                    })
+
+                </td>
+            </tr>
+            i++;
+        }
+
+    </table>
+
+</div>

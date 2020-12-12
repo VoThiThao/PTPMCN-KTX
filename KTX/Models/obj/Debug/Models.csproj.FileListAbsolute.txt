@@ -1,0 +1,10 @@
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\bin\Debug\Models.dll.config
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\bin\Debug\Models.dll
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\bin\Debug\Models.pdb
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\bin\Debug\EntityFramework.dll
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\bin\Debug\EntityFramework.xml
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\obj\Debug\Models.dll
+D:\Phát triển PM chuyên nghiệp\KTX_MVC\KTX\Models\obj\Debug\Models.pdb
