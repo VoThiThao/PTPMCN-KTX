@@ -9,36 +9,20 @@ namespace KTX.Models
 {
     public class QLSVModel
     {
-        [Required(ErrorMessage = "Vui lòng nhập mã sinh viên")]
-        [Display(Name = "Mã sinh viên: ")]
         public String MaSV { set; get; }
 
-        [Required(ErrorMessage = "Vui lòng nhập họ tên sinh viên")]
-        [Display(Name = "Họ và tên: ")]
         public String HoTen { set; get; }
 
-        [Required(ErrorMessage = "Vui lòng nhập ngày sinh")]
-        [Display(Name = "Ngày sinh: ")]
         public DateTime NgaySinh { set; get; }
 
-        [Required(ErrorMessage = "Vui lòng nhập giới tính")]
-        [Display(Name = "Giới tính: ")]
         public String GioiTinh { set; get; }
 
-        [Required(ErrorMessage = "Vui lòng nhập CMND")]
-        [Display(Name = "CMND: ")]
         public int CMND { set; get; }
 
-        [Required(ErrorMessage = "Vui lòng nhập quê quán")]
-        [Display(Name = "Quê quán: ")]
         public String QueQuan { set; get; }
 
-        [Required(ErrorMessage = "Vui lòng nhập lớp")]
-        [Display(Name = "Lớp: ")]
         public String Lop { set; get; }
 
-        [Required(ErrorMessage = "Vui lòng nhập khoa")]
-        [Display(Name = "Khoa: ")]
         public String Khoa { set; get; }
 
         private DBKTX db;

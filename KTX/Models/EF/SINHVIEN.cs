@@ -1,4 +1,4 @@
-namespace Models.EF
+﻿namespace Models.EF
 {
     using System;
     using System.Collections.Generic;
@@ -14,29 +14,42 @@ namespace Models.EF
         {
             PHONGSVs = new HashSet<PHONGSV>();
         }
-
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "Mã sinh viên: ")]
         [Key]
         [StringLength(15)]
         public string MaSV { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "Họ tên: ")]
         [StringLength(50)]
         public string HoTen { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "Ngày sinh: ")]
         public DateTime? NgaySinh { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "Giới tính: ")]
         [StringLength(4)]
         public string GioiTinh { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "CMND: ")]
         public int CMND { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "Quê quán: ")]
         [StringLength(50)]
         public string QueQuan { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "Lớp: ")]
         [StringLength(50)]
         public string Lop { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "Khoa: ")]
         [StringLength(50)]
         public string Khoa { get; set; }
 

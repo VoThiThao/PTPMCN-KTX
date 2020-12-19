@@ -70,19 +70,24 @@ namespace KTX.Controllers
                 var dao = new PhongModel();
 
                 var result = dao.Update(phong);
-                if (result)
-                {
-                    SetAlert("Chỉnh sửa thông tin phòng thành công ", "success");
-                    return RedirectToAction("Index", "Phong");
-                }
-                else
-                {
-                    if (phong.SoCho > 8)
+                try { 
+                    if (result)
                     {
-                        ModelState.AddModelError("", "Mỗi phòng chỉ có 8 chỗ!");
+                        SetAlert("Chỉnh sửa thông tin phòng thành công ", "success");
+                        return RedirectToAction("Index", "Phong");
                     }
                     else
-                        ModelState.AddModelError("", "Mã phòng không được sửa");
+                    {
+                        if (phong.SoCho > 8)
+                        {
+                            ModelState.AddModelError("", "Mỗi phòng chỉ có 8 chỗ!");
+                        }
+                        else
+                            ModelState.AddModelError("", "Mã phòng không được sửa");
+                    }
+                }catch (Exception e)
+                {
+                    
                 }
             }
             return View();

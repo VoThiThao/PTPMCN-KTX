@@ -23,8 +23,14 @@ namespace KTX.Models
 
         public String Insert(PHONG entityPhong)
         {
-            db.PHONGs.Add(entityPhong);
-            db.SaveChanges();
+            try
+            {
+                db.PHONGs.Add(entityPhong);
+                db.SaveChanges();
+            }catch (Exception e)
+            {
+                Console.WriteLine("Thêm không thành công vui lòng kiểm tra lại!", e.Message);
+            }
             return entityPhong.MaPhong;
         }
 

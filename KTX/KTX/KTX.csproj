@@ -159,6 +159,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PhongController.cs" />
+    <Compile Include="Controllers\QLPSVController.cs" />
     <Compile Include="Controllers\QLSVController.cs" />
     <Compile Include="Controllers\TCController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -167,6 +168,7 @@
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PhongModel.cs" />
+    <Compile Include="Models\QLPSVModel.cs" />
     <Compile Include="Models\QLSVModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1169,6 +1171,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -1199,6 +1203,9 @@
     <Content Include="Views\Phong\Index.cshtml" />
     <Content Include="Views\Phong\Create.cshtml" />
     <Content Include="Views\Phong\Edit.cshtml" />
+    <Content Include="Views\QLPSV\Index.cshtml" />
+    <Content Include="Views\QLPSV\Create.cshtml" />
+    <Content Include="Views\QLPSV\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

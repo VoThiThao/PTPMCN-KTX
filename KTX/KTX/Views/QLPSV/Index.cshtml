@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Models.EF.SINHVIEN>
+﻿@model IEnumerable<Models.EF.PHONGSV>
 
 @{
     ViewBag.Title = "Index";
@@ -7,7 +7,7 @@
 
 @section Header{
     <h3 class="fa fa-home">
-        @Html.ActionLink("Quản lý sinh viên", "Index","", new { /* id=item.PrimaryKey */ })
+        @Html.ActionLink("Quản lý phòng sinh viên", "Index","", new { /* id=item.PrimaryKey */ })
     </h3>
 }
 
@@ -15,7 +15,7 @@
 {
     <div class="navbar-form">
         <p class="form-group ">
-            @Html.ActionLink("Tạo mới", "Create", "", new { @class = "btn btn-primary" })
+            @Html.ActionLink("Tạo mới", "Create","", new { @class = "btn btn-primary" })
         </p>
         <div class="navbar-form navbar-right ">
             <div class="form-group">
@@ -26,36 +26,29 @@
             </div>
         </div>
     </div>
+
 }
 <table class="table">
     <tr>
         <th>STT</th>
         <th>
+            @Html.DisplayNameFor(model => model.MaPhongSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaPhong)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.MaSV)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HoTen)
+            @Html.DisplayNameFor(model => model.ThoiGianBĐ)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NgaySinh)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GioiTinh)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CMND)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.QueQuan)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Lop)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Khoa)
+            @Html.DisplayNameFor(model => model.ThoiGianKT)
         </th>
         <th></th>
     </tr>
+
     @{var i = 1;}
     @foreach (var item in Model)
     {
@@ -64,42 +57,29 @@
                 @i
             </td>
             <td>
+                @item.MaPhongSV
+            </td>
+            <td>
+                @item.MaPhong
+            </td>
+            <td>
                 @item.MaSV
             </td>
             <td>
-                @item.HoTen
+                @item.ThoiGianBĐ
             </td>
             <td>
-                @item.NgaySinh
-            </td>
-            <td>
-                @item.GioiTinh
-            </td>
-            <td>
-                @item.CMND
-            </td>
-            <td>
-                @item.QueQuan
-            </td>
-            <td>
-                @item.Lop
-            </td>
-            <td>
-                @item.Khoa
+                @item.ThoiGianKT
             </td>
             <td>
                 @Html.ActionLink("Sửa", "Edit", new { @item.MaSV })|
-                @Ajax.ActionLink("Xoá", "Delete", new { @MaSV = item.MaSV }
-                , new AjaxOptions
+                @Ajax.ActionLink("Xoá", "Delete", new { @MaSV = item.MaSV }, new AjaxOptions
                     {
                         Confirm = "Bạn có muốn xoá thông tin này",
                         OnComplete = "$('#row_" + item.MaSV + "').remove()",
-                        HttpMethod = "Post",
+                        HttpMethod = "Delete",
                         OnSuccess = "window.location.reload()"
-
-                    }
-                )
-
+                    })
 
             </td>
         </tr>

@@ -7,7 +7,7 @@
 
 @section Header{
     <h3 class="fa fa-home">
-        @Html.ActionLink("Quản lý sinh viên", "Index", new { /* id=item.PrimaryKey */ })
+        @Html.ActionLink("Quản lý sinh viên", "Index","", new { /* id=item.PrimaryKey */ })
     </h3>
 }
 
@@ -16,8 +16,8 @@
 {
     @Html.AntiForgeryToken()
     <div class="navbar-form">
-        <p class="form-group  btn btn-primary">
-            @Html.ActionLink("Về danh sách", "Index", new { /*@class = "btn btn-primary"*/ })
+        <p class="form-group ">
+            @Html.ActionLink("Về danh sách", "Index","", new { @class = "btn btn-primary" })
         </p>
     </div>
 
