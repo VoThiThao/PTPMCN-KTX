@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Models.EF.SINHVIEN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Header{
+    <h3 class="fa fa-home">
+        @Html.ActionLink("Quản lý sinh viên", "Index", new { /* id=item.PrimaryKey */ })
+    </h3>
+}
+
+@using (Html.BeginForm())
+{
+    <div class="navbar-form">
+        <p class="form-group  btn btn-primary">
+            @Html.ActionLink("Tạo mới", "Create", "", new { /*@class = "btn btn-danger"*/ })
+        </p>
+        <div class="navbar-form navbar-right ">
+            <div class="form-group">
+                <input type="text" value="@ViewBag.SearchString" name="searchString" placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+            </div>
+        </div>
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>STT</th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgaySinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GioiTinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CMND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QueQuan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Khoa)
+        </th>
+        <th></th>
+    </tr>
+    @{var i = 1;}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @i
+            </td>
+            <td>
+                @item.MaSV
+            </td>
+            <td>
+                @item.HoTen
+            </td>
+            <td>
+                @item.NgaySinh
+            </td>
+            <td>
+                @item.GioiTinh
+            </td>
+            <td>
+                @item.CMND
+            </td>
+            <td>
+                @item.QueQuan
+            </td>
+            <td>
+                @item.Lop
+            </td>
+            <td>
+                @item.Khoa
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { @item.MaSV })|
+                @Ajax.ActionLink("Xoá", "Delete", new { @MaSV = item.MaSV }
+                , new AjaxOptions
+                    {
+                        Confirm = "Bạn có muốn xoá thông tin này",
+                        OnComplete = "$('#row_" + item.MaSV + "').remove()",
+                        HttpMethod = "Post",
+                        OnSuccess = "window.location.reload()"
+
+                    }
+                )
+
+
+            </td>
+        </tr>
+        i++;
+    }
+
+</table>

@@ -44,7 +44,7 @@ namespace KTX.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "QLSVs");
+                        return RedirectToAction("Index", "QLSV");
 
                     }
 

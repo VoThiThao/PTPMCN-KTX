@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Models.EF.PHONG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header{
+    <h3 class="fa fa-home">
+        @Html.ActionLink("Quản lý Phòng", "Index", new { /* id=item.PrimaryKey */ })
+    </h3>
+}
+
+
+
+@using (Html.BeginForm())
+{
+    <div class="navbar-form">
+        <p class="form-group  btn btn-primary">
+            @Html.ActionLink("Tạo mới", "Create", "", new { /*@class = "btn btn-danger"*/ })
+        </p>
+        <div class="navbar-form navbar-right ">
+            <div class="form-group">
+                <input type="text" value="@ViewBag.SearchString" name="searchString" placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+            </div>
+        </div>
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoCho)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaCTD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaCTN)
+        </th>
+        <th></th>
+    </tr>
+    @{var i = 1;}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @i
+            </td>
+            <td>
+                @item.MaPhong
+            </td>
+            <td>
+                @item.SoCho
+            </td>
+            <td>
+                @item.TinhTrang
+            </td>
+            <td>
+                @item.MaCTD
+            </td>
+            <td>
+                @item.MaCTN
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { @item.MaPhong })|
+                @Ajax.ActionLink("Xoá", "Delete", new { @MaPhong = item.MaPhong }, new AjaxOptions
+                    {
+                        Confirm = "Bạn có muốn xoá thông tin này",
+                        OnComplete = "$('#row_" + item.MaPhong + "').remove()",
+                        HttpMethod = "Delete",
+                        OnSuccess = "window.location.reload()"
+                    })
+
+            </td>
+
+        </tr>
+        i++;
+    }
+
+</table>
