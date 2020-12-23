@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Models.EF.NUOC>
+
+    @{
+        ViewBag.Title = "Quản lý nước";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    @section Header{
+        <h3 class="fa fa-tint">
+            @Html.ActionLink("Quản lý nước", "Index", new { /* id=item.PrimaryKey */ })
+        </h3>
+    }
+    @using (Html.BeginForm())
+    {
+        <div class="col-lg-12 form-group">
+            <div class="col-md-6">
+                <p>
+                    @Html.ActionLink("Tạo mới", "Create", "QLN", new { @class = "btn btn-primary" })
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <input type="text" value="@ViewBag.SearchString" name="searchString"
+                       placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+            </div>
+
+            <div class="col-md-2">
+                <input type="submit" value="Tìm kiếm" class="btn btn-primary" />
+            </div>
+        </div>
+    }
+    <div class="col-lg-12 form-group">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaNuoc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaPhong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NgayGhi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CSD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CSC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DonGia)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaNuoc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaPhong)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NgayGhi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CSD)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CSC)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonGia)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Sửa", "Edit", new { @item.MaNuoc })|
+                        @Ajax.ActionLink("Xoá", "Delete", new { @MaNuoc = item.MaNuoc }, new AjaxOptions
+                    {
+                        Confirm = "Bạn có muốn xoá thông tin này",
+                        OnComplete = "$('#row_" + @item.MaNuoc + "').remove()",
+
+                        HttpMethod = "Delete",
+                        OnSuccess = "window.location.reload()"
+                    })
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>

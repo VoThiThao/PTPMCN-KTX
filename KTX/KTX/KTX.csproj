@@ -160,6 +160,8 @@
     <Compile Include="Controllers\HoaDonController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PhongController.cs" />
+    <Compile Include="Controllers\QLDController.cs" />
+    <Compile Include="Controllers\QLNController.cs" />
     <Compile Include="Controllers\QLPSVController.cs" />
     <Compile Include="Controllers\QLSVController.cs" />
     <Compile Include="Controllers\TCController.cs" />
@@ -171,6 +173,8 @@
     <Compile Include="Models\HoaDonModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PhongModel.cs" />
+    <Compile Include="Models\QLDModel.cs" />
+    <Compile Include="Models\QLNModel.cs" />
     <Compile Include="Models\QLPSVModel.cs" />
     <Compile Include="Models\QLSVModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -1209,9 +1213,18 @@
     <Content Include="Views\QLPSV\Index.cshtml" />
     <Content Include="Views\QLPSV\Create.cshtml" />
     <Content Include="Views\QLPSV\Edit.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\HoaDon\Create.cshtml" />
     <Content Include="Views\HoaDon\Index.cshtml" />
     <Content Include="Views\HoaDon\Edit.cshtml" />
+=======
+    <Content Include="Views\QLD\Index.cshtml" />
+    <Content Include="Views\QLD\Create.cshtml" />
+    <Content Include="Views\QLD\Edit.cshtml" />
+    <Content Include="Views\QLN\Index.cshtml" />
+    <Content Include="Views\QLN\Create.cshtml" />
+    <Content Include="Views\QLN\Edit.cshtml" />
+>>>>>>> 841ff47927251bd346e2f376320ec3960283f96f
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
