@@ -18,3 +18,13 @@ D:\HKI-Nam4\PhatTrienPhanMemChuyenNghiep\PTPMCN-KTX\KTX\Models\bin\Debug\EntityF
 D:\HKI-Nam4\PhatTrienPhanMemChuyenNghiep\PTPMCN-KTX\KTX\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\HKI-Nam4\PhatTrienPhanMemChuyenNghiep\PTPMCN-KTX\KTX\Models\obj\Debug\Models.dll
 D:\HKI-Nam4\PhatTrienPhanMemChuyenNghiep\PTPMCN-KTX\KTX\Models\obj\Debug\Models.pdb
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\bin\Debug\Models.dll.config
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\bin\Debug\Models.dll
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\bin\Debug\Models.pdb
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\bin\Debug\EntityFramework.dll
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\bin\Debug\EntityFramework.xml
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\obj\Debug\Models.dll
+C:\Users\Mai Thanh Phong\Desktop\PTPMCN\KTX\Models\obj\Debug\Models.pdb

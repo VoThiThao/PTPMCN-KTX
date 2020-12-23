@@ -159,6 +159,8 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PhongController.cs" />
+    <Compile Include="Controllers\QLDController.cs" />
+    <Compile Include="Controllers\QLNController.cs" />
     <Compile Include="Controllers\QLPSVController.cs" />
     <Compile Include="Controllers\QLSVController.cs" />
     <Compile Include="Controllers\TCController.cs" />
@@ -168,6 +170,8 @@
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PhongModel.cs" />
+    <Compile Include="Models\QLDModel.cs" />
+    <Compile Include="Models\QLNModel.cs" />
     <Compile Include="Models\QLPSVModel.cs" />
     <Compile Include="Models\QLSVModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -1206,6 +1210,12 @@
     <Content Include="Views\QLPSV\Index.cshtml" />
     <Content Include="Views\QLPSV\Create.cshtml" />
     <Content Include="Views\QLPSV\Edit.cshtml" />
+    <Content Include="Views\QLD\Index.cshtml" />
+    <Content Include="Views\QLD\Create.cshtml" />
+    <Content Include="Views\QLD\Edit.cshtml" />
+    <Content Include="Views\QLN\Index.cshtml" />
+    <Content Include="Views\QLN\Create.cshtml" />
+    <Content Include="Views\QLN\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
